@@ -6,12 +6,6 @@ source ~/.git-completion.bash
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
-alias mint-latest='ssh 75.101.215.82'
-export PATH=/Users/jnutter/Sites/phpunit-git-deploy/bin:$PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH=/Users/jnutter/Sites/beachmint/ci/bin:$PATH
-
 export DOTBASH=~/.bash
 source $DOTBASH/main.sh
 export PS1="\u \W\[$txtcyn\]\$git_branch\[$txtrst\]\$ "
