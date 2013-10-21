@@ -1,0 +1,31 @@
+[user]
+	name = Jonathan Nutter
+	email = jnutter@gmail.com
+
+[color]
+	pager = true
+	ui = true
+	status = auto
+	branch = auto
+
+[alias]
+	s = status
+	co = checkout
+	pom = push origin master
+	su = submodule update --init --recursive
+	c = commit
+	ca = commit -a -m
+	p = !git pull && git su
+	cp = cherry-pick
+	close = !sh -c 'git branch -D $1 && git push origin :$1'
+	closeall = !"for i in $(git branch | sed 's/^..//'); do if [[ $i != 'master' && $i != 'release' ]]; then git close $i; fi; done"
+	grep = !sh -c 'git log --pretty=oneline --reverse $2 | grep $1' -
+	last = !sh -c 'git log -1 --pretty=oneline $1 | grep -Po "^[0-9a-zA-Z]+"' -
+	mod = !"git status --porcelain | awk '/\\s?(M|A)/ {print $2}'"
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+[core]
+	editor = vi
