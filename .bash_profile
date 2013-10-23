@@ -1,8 +1,11 @@
-export CVS_RSH=ssh
-export PATH=/usr/local/bin:/AIRSDK/bin:/usr/local/mysql/bin:/opt/subversion/bin:$PATH
-export set SVN_EDITOR=vim
+export PATH=/usr/local/bin:$PATH
+export TERM='xterm-256color'
+export EDITOR=`which vim
 
-source ~/.git-completion.bash
+# Git branch competion
+if [ -f ~/git-completion.bash ]; then
+  source ~/git-completion.bash
+fi
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
@@ -22,11 +25,5 @@ function pr () {
 
 export -f pr
 
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
