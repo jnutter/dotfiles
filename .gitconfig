@@ -38,4 +38,4 @@
 	new = green bold
 
 [core]
-	editor = vi
+	editor = vim
