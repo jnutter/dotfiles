@@ -1,0 +1,41 @@
+# Notes: "\e" translates to "^["
+#        you can test this via Ctrl+V then your commend sequence
+
+# OSX style delete button
+"\e[3~": delete-char
+
+# Option -> / <- for forward/back word
+"\e\e[C":  forward-word
+"\e\e[D":  backward-word
+"\e[1;3C": forward-word
+"\e[1;3D": backward-word
+"\e[1;9C": forward-word
+"\e[1;9D": backward-word
+
+
+# Control -> / <- beginning/end of line
+"\e\e5D": beginning-of-line
+"\e\e5C": end-of-line
+"\e[1;5D": beginning-of-line
+"\e[1;5C": end-of-line
+
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+
+# VIM-style ^W -- http://shallowsky.com/blog/linux/bash-word-erase.html
+set bind-tty-special-chars Off
+"\C-w": backward-kill-word
+
+# Be more intelligent when autocompleting by also looking at the text after
+# the cursor. For example, when the current line is "cd ~/src/mozil", and
+# the cursor is on the "z", pressing Tab will not autocomplete it to "cd
+# ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
+# Readline used by Bash 4.)
+set skip-completed-text on
+
+# Single tab complete instead of double-tab complete
+set show-all-if-ambiguous on
+
+# Ignore case when tab completing
+set completion-ignore-case on
