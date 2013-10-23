@@ -7,8 +7,6 @@ if [ -f ~/git-completion.bash ]; then
   source ~/git-completion.bash
 fi
 
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
-
 export DOTBASH=~/.bash
 source $DOTBASH/main.sh
 export PS1="\u \W\[$txtcyn\]\$git_branch\[$txtrst\]\$ "
