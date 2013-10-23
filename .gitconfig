@@ -2,6 +2,9 @@
 	name = Jonathan Nutter
 	email = jnutter@gmail.com
 
+[github]
+	user = jnutter
+
 [color]
 	pager = true
 	ui = true
