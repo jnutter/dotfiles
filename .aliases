@@ -1,0 +1,7 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias -- -="cd -"
+alias g="git"
+alias ios='open -a /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
+alias sites='cd ~/Sites'
+alias beachmint='cd ~/Sites/beachmint'
