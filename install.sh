@@ -32,6 +32,10 @@ for src in $(find $PWD -maxdepth 1); do
   fi
 done
 
+# Configure OSX settings
+echo "=== Setting OSX options"
+./osx.sh $dir
+
 # Resume previous directory
 cd - > /dev/null
 
