@@ -1,0 +1,11 @@
+{
+  "ignored_packages":["Vintage"],
+  "spell_check": true,
+  "translate_tabs_to_spaces": true,
+  "detect_indentation": false,
+  "tab_size": 2,
+  "trim_trailing_white_space_on_save": true,
+  "wrap_width": 180,
+  "create_window_at_startup": false,
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS"]
+}
