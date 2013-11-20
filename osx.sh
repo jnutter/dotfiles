@@ -41,6 +41,10 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# Add quit to the finder menu
+defaults write com.apple.Finder QuitMenuItem -bool true
+
+
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
